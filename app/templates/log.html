@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<h1>Log records</h1>
+</div>
+
+
+<div class="container">
+ <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+		<th>Currency</th>
+        <th>Amount</th>
+        <th>Date</th>
+		<th>Descriptions</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for item in data %}
+			<tr class="success">
+			   <td> {{item["pay_id"]}} </td>
+			   <td> {{item["currency"]}} </td>
+			   <td> {{item["amount"]}} </td>
+			   <td> {{item["date"]}} </td>
+			   <td> {{item["description"]}} </td>
+			</tr>
+        {% endfor %}
+
+    </tbody>
+  </table>
+
+</div>
+
+</body>
+</html>

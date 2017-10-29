@@ -1,0 +1,43 @@
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body  class="body" style="background-color:#f6f6f6">				
+		<div class="col-xs-10">
+			<h3>Оплатить:<h3>
+			<br><br>
+			<div>
+				<form action="/go" id="create-bill" method="POST" target="_blank">
+					<table class="table">
+					<tr class="form-row">
+						<th><label for="amount">Сумма:</label></th>
+						<th><input id="amount" name="amount" value="10" placeholder="0.00" type="text"></th>
+					</tr>
+					<tr class="form-row">
+						<th><label for="currency">Валюта:</label></th>
+						<th>
+							<select name="currency" id="currency" class="">
+								<option value="840">USD</option>
+								<option value="978">EUR</option>
+							</select>
+						</th>
+					</tr>
+					<tr class="form-row">
+						<th><label for="description">Описание Товара:</label></th>
+						<th><input id="description" name="description" value="Test invoice" placeholder="Описание" type="text"></th>
+					</tr>
+					</table>
+					<div class="form-row">
+						<input type="submit" class="save-button" value=" Оплатить ">
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	<div class="container">
+		<a href="/log">Show logs</a>
+	</div>
+</body>
+</html>
