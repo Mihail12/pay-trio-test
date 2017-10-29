@@ -25,8 +25,8 @@ def first():
             
             sign = tip(data)
             
-            return render_template(
-                "dollar.html",
+            return redirect(
+                "https://tip.pay-trio.com/ru/",
                 data=data,
                 sign=sign)
 
