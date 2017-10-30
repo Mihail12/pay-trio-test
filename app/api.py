@@ -16,9 +16,9 @@ def tip(data):
     request = {
         "shop_id":constants.shop_id,
         "amount": data.amount,
-        "payway": "",
+        "payway": "payeer_usd",
         "currency": data.currency,
-        "shop_invoice_id":'101',
+        "shop_invoice_id":'100dfs0d0fsd0g0sdf0sdfs01',
         "description":data.description,
         }
     keys_sorted = ("amount", "currency", "shop_id",  "shop_invoice_id")
@@ -28,7 +28,7 @@ def post_invoice_API(data):
     request = {
         "shop_id":constants.shop_id,
         "amount": data.amount,
-        "payway": "payway",
+        "payway": "payeer_eur",
         "currency": data.currency,
         "shop_invoice_id":'101',
         "description":data.description,
