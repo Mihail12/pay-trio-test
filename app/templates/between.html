@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Dollar</title>
+  </head>
+  <body>
+	  <h1>Dollar</h1>
+  <br><br><br><br>
+	<form name="Pay" method="post" action="https://tip.pay-trio.com/ru/" accept-charset="UTF-8">
+		<input  name="amount" value={{data.amount}} />
+		<input  name="currency" value={{data.currency}} />
+		<input  name="shop_id" value={{data.shop_id}} />
+		<input  name="sign" value={{data.sign}} />
+		<input  name="shop_invoice_id" value="100001" />
+		<input  name="description" value={{data.description}} />
+		<input type="submit"/>
+	</form>
+  </body>
+</html>

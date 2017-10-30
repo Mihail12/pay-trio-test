@@ -1,7 +1,8 @@
-from flask import render_template, flash, redirect, request
+from flask import render_template, flash, redirect, request, url_for
 from app import app, db
 from models import Transaction
 from api import tip, post_invoice_API
+import json
 
 @app.route('/')
 @app.route('/index')
@@ -22,13 +23,13 @@ def first():
         db.session.commit()
 
         if request.form["currency"]=="840":
-            
-            sign = tip(data)
-            
+            tip_data = tip(data)
+            data = tip_data[0]
+            data['sign']=tip_data[1]
             return render_template(
-                "dollar.html",
-                data=data,
-                sign=sign)
+                'between.html',
+                data = data,
+                )
 
         if request.form["currency"]=="978":
             text = post_invoice_API(data)

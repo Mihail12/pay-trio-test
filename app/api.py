@@ -22,7 +22,7 @@ def tip(data):
         "description":data.description,
         }
     keys_sorted = ("amount", "currency", "shop_id",  "shop_invoice_id")
-    return  get_sign(request, keys_sorted)
+    return (request, get_sign(request, keys_sorted))
 
 def post_invoice_API(data):
     request = {
