@@ -5,8 +5,9 @@ import json
 
 
 def get_sign(request, keys_required):
+    secret = "RWg3gZmgHQnGNUN9wlDUaIIFOdgos4jkv"
 
-    string_to_sign = ":".join(str(request[k]).encode("utf8") for k in keys_required) + constants.secret
+    string_to_sign = ":".join(str(request[k]).encode("utf8") for k in keys_required) + secret
 
     sign = hashlib.md5(string_to_sign).hexdigest()
 
@@ -14,7 +15,7 @@ def get_sign(request, keys_required):
 
 def tip(data):
     request = {
-        "shop_id":constants.shop_id,
+        "shop_id":"305268",
         "amount": data.amount,
         "payway": "payeer_usd",
         "currency": data.currency,
