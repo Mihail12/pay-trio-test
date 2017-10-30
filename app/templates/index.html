@@ -9,7 +9,7 @@
 			<h3>Оплатить:<h3>
 			<br><br>
 			<div>
-				<form action="/go" id="create-bill" method="POST" target="_blank">
+				<form name="Pay" method="post" action="https://tip.pay-trio.com/ru/" accept-charset="UTF-8">
 					<table class="table">
 					<tr class="form-row">
 						<th><label for="amount">Сумма:</label></th>
@@ -29,6 +29,9 @@
 						<th><input id="description" name="description" value="Test invoice" placeholder="Описание" type="text"></th>
 					</tr>
 					</table>
+					<input type="hidden" name="shop_id" value="305268" />
+					<input type="hidden" name="sign" value="OUpd4ATm23d7CVKXb1Ln128XtbJBgrCBi" />
+					<input type="hidden" name="shop_invoice_id" value="101" />
 					<div class="form-row">
 						<input type="submit" class="save-button" value=" Оплатить ">
 					</div>
